@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/crudapp', {
+    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://sakurekaran56_db_user:suSTYoowMfgCAPD1@cicdnode.dxdkwq6.mongodb.net/?appName=cicdnode', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
