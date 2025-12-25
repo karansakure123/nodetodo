@@ -18,7 +18,7 @@ app.use('/api/items', items);
 
 // Health check route
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'OK', message: 'Server is running' });
+  res.status(200).json({ status: 'OK', message: 'Server is running with cicd' });
 });
 
 // 404 handler - must be last
