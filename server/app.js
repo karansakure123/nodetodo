@@ -9,6 +9,7 @@ connectDB();
 
 const app = express();
 
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,7 +19,7 @@ app.use('/api/items', items);
 
 // Health check route
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'OK', message: 'Server is running with cicd' });
+  res.status(200).json({ status: 'OK', message: 'Server is Running  Successfully ' });
 });
 
 // 404 handler - must be last
