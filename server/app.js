@@ -7,6 +7,7 @@ import dotenv from "dotenv"
 
  
 dotenv.config();
+
 // Connect to database
 connectDB();
 const app = express();
