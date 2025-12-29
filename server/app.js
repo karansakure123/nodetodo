@@ -3,14 +3,20 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import connectDB from './config/database.js';
 import items from './routes/items.js';
+import dotenv from "dotenv"
 
+ 
+dotenv.config();
 // Connect to database
 connectDB();
-
 const app = express();
 
+const frontend_url = process.env.FRONTEND_URI
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: frontend_url
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
  // Routes
